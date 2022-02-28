@@ -1,0 +1,26 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+System.setProperty("webdriver.chrome.driver","/home/excellarate/Downloads/chromedriver");
+                                                      //blank chrome browser tab will open
+		WebDriver wb=new ChromeDriver();
+		wb.get("http://omayo.blogspot.com/");        //providing url to open in browser
+		
+		wb.manage().window().maximize();             //use to maximize the browser screen
+		
+        WebElement element=	wb.findElement(By.name("q"));    //finding ui elements -->providing locators
+        
+      //  element.click();    //click on the button
+       element.sendKeys("akshay");   //we can type any thing in text box,search box etc...
+       
+       // Thread.sleep(5000);
+       // element.clear();
+	}
+
+}
